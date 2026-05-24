@@ -75,4 +75,6 @@ Command to run tests
 cd build
 ctest --output-on-failure
 ```
+---
+Small rule **No PDFs just markdowns**
 
