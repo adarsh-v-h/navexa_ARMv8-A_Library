@@ -2,13 +2,18 @@
 #include <sys/mman.h>
 #include <sys/prctl.h>
 #include <cstdint>
+#include <cstdio>  // Added for perror and printf
 
 namespace navexa {
 namespace mte {
 
 void init_protection() {
-    // Enable synchronous tag checking
-    prctl(PR_SET_TAGGED_ADDR_CTRL, PR_TAGGED_ADDR_ENABLE | PR_MTE_TCF_SYNC, 0, 0, 0);
+    // Enable synchronous tag checking and explicitly check for environment support
+    if (prctl(PR_SET_TAGGED_ADDR_CTRL, PR_TAGGED_ADDR_ENABLE | PR_MTE_TCF_SYNC, 0, 0, 0) < 0) {
+        std::perror("[MTE SYSTEM WARNING] prctl failed. Your current QEMU build or host kernel does not support hardware MTE enforcement");
+    } else {
+        std::printf("[MTE SYSTEM INFO] Hardware MTE initialized successfully in Synchronous mode.\n");
+    }
 }
 
 void* malloc(size_t size) {
