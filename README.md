@@ -1,5 +1,23 @@
 # navexa_ARMv8-A_Library
 
+## Commands to run to install requirements
+For this you either need to have a linux system or WSL. This assumes you have apt as your package manager
+```bash
+sudo apt update
+sudo apt install -y \
+  gcc-aarch64-linux-gnu \
+  g++-aarch64-linux-gnu \
+  binutils-aarch64-linux-gnu \
+  qemu-user \
+  qemu-user-static \
+  cmake \
+  ninja-build \
+  git \
+  clang-format \
+  clang-tidy \
+  valgrind
+```
+---
 ## Commands to run to setup
 ```bash
 # From repo root:
