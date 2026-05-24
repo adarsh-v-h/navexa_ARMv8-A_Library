@@ -42,31 +42,18 @@ relaxed/acquire/release semantics for concurrency. Large atomic helpers for acce
 
 **Context** **&** **Why**: Armv8.5+ feature. Developers need reliable entropy for security (crypto keys, nonces). Critical in loT (secure comms), mobile, servers, and automotive (key generation). Gaps in older ARMv8 lead to software workarounds.
 
-# 7. Power & Performance Management Primitives (WFI/WFE, DVFS Helpers, Counter Scaling)
-
-**What** it **fulfills**: **Optimized** wait-for-interrupt/event, dynamic voltage/frequency scaling
-
-abstractions, generic counter scaling, and energy monitoring.
-
-**Context** & **Why:** ARMMv8 excels in efficiency but developers want better portable controls for battery life and thermal management. Key in mobile, embedded/loT, automotive, and edge servers. Future extensions refined this; library unifies across variants.
-
-# 8. Virtualization & Hypervisor Support Extensions (VHE, Stage 2, Nested)
+# 7. Virtualization & Hypervisor Support Extensions (VHE, Stage 2, Nested)
 
 **What** **it fulfills**: Optimized VM context switching, memory virtualization, interrupt handling, and guest/host abstractions.
 
 **Context** & **Why**: ARMv8 virtualization is strong but complex; used in cloud servers, edge computing, and automotive (mixed-criticality). Developers discuss porting pains and performance overheads. Library eases hypervisor/OS development.
 
-# 9. High-Precision Math & Transcendental Functions (Vectorized)
+# 8. High-Precision Math & Transcendental Functions (Vectorized)
 
 **What** **it fulfills**: Optimized sin/cos/log/exp, matrix math, andfixed-point/floating-point helpers with NEON/SVE fallbacks.
 
 **Context** **&** **Why**: Needed for HPC (simulations, climate modeling), Al (activations),and scientific embedded. ARMv8 lacks some vectorized intrinsics compared to x86; papers and devs optimize these heavily.
 
-# 10. Security & Confidential Compute Primitives (Branch Target ID, Pointer Authentication, Realm-like Isolation)
-
-**What** it **fulfills**: BTI, PAC (pointer auth), shadow stack helpers, and basic confidential compute abstractions (e.g., realm simulation).
-
-**Context** & **Why**: Armv8.3+ and Armv9 features for ROP/JOP mitigation and isolation. Vital for mobile (app sandboxing), servers (cloud tenants), automotive (safety), and loT. Developers wish for easier portable security layers on base ARMv8.
 
 # Summary of Research Insights
 
