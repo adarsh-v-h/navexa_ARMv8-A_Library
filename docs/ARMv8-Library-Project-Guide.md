@@ -127,9 +127,8 @@ With 10 functionalities and 4 people, split as follows (suggested, adjust by int
 | Person A | 1 — SVE/NEON, 9 — Math/Transcendentals |
 | Person B | 2 — SME Matrix, 8 — Virtualization Helpers |
 | Person C | 3 — MTE Simulation, 5 — Atomics |
-| Person D | 4 — Crypto Extensions, 6 — RNG, 7 — Power/Perf, 10 — Security/PAC |
+| Person D | 4 — Crypto Extensions, 6 — RNG |
 
-Person D gets four items because 7 and 10 are smaller in scope — they're mostly wrappers and constants, not full algorithm implementations.
 
 ### How to Work Without Breaking Each Other
 
