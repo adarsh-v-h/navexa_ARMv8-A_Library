@@ -1,6 +1,7 @@
 #include <cstdint>
 #pragma once
 #include <cstddef>
+#include <cstdint>
 
 namespace navexa {
 namespace mte {
