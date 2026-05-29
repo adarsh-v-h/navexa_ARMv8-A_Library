@@ -23,7 +23,6 @@ file(GLOB_RECURSE LIB_SOURCES src/**/*.cpp)
 add_library(armv8lib STATIC ${LIB_SOURCES})
 target_include_directories(armv8lib PUBLIC include)
 target_include_directories(armv8lib PRIVATE src)        # ← ADD THIS
-target_compile_options(armv8lib PRIVATE -march=armv8-a) # ← ADD THIS
 
 # Tests
 enable_testing()
