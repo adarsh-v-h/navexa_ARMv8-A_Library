@@ -31,8 +31,8 @@
  *                          (case-sensitive substring match)
  */
 
-#include "armv8lib/sve.h"
-#include "armv8lib/mathext.h"
+#include "../armv8lib/sve.h"
+#include "../armv8lib/mathext.h"
 
 #include <arm_neon.h>
 #include <chrono>
